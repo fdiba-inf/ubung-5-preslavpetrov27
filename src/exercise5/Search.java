@@ -20,7 +20,25 @@ public class Search {
         int number = input.nextInt();
 
         int numberIndex = -1;
-        // Search for number in numbers
+        int leftIndex= 0;
+        int rightIndex= numbers.length - 1;
+        int middleIndex;
+        do{
+          middleIndex = (leftIndex + rightIndex)/2;
+           int middleElement= numbers[middleIndex];
+
+          if(middleElement==number){
+            numberIndex = middleIndex;
+            break;
+          }
+
+          if (middleElement>number){
+            rightIndex= middleIndex-1;
+          }else{
+            leftIndex=middleIndex+1;
+          }
+
+        }while(leftIndex<=rightIndex);
 
         System.out.println("Number index: " + numberIndex);
     }
