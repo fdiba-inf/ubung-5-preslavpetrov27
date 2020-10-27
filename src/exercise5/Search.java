@@ -21,10 +21,10 @@ public class Search {
 
         int numberIndex = -1;
         int leftIndex= 0;
-        int rightIndex= numbers.length - 1;
         int middleIndex;
-        do{
-          middleIndex = (leftIndex + rightIndex)/2;
+        int rightIndex=numbers.length-1;
+    do{
+          middleIndex = (leftIndex + rightIndex) /2;
            int middleElement= numbers[middleIndex];
 
           if(middleElement==number){
