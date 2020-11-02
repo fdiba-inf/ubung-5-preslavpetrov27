@@ -20,26 +20,12 @@ public class Search {
         int number = input.nextInt();
 
         int numberIndex = -1;
-        int leftIndex= 0;
-        int middleIndex;
-        int rightIndex=numbers.length-1;
-    do{
-          middleIndex = (leftIndex + rightIndex) /2;
-           int middleElement= numbers[middleIndex];
-
-          if(middleElement==number){
-            numberIndex = middleIndex;
+       for (int index = 0; index < numbers.length; index++) {
+          if (numbers[index] == number) {
+            numberIndex = index; 
             break;
           }
-
-          if (middleElement>number){
-            rightIndex= middleIndex-1;
-          }else{
-            leftIndex=middleIndex+1;
-          }
-
-        }while(leftIndex<=rightIndex);
-
+        }
         System.out.println("Number index: " + numberIndex);
     }
 }
